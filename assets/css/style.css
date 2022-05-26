@@ -1,0 +1,355 @@
+:root {
+	--color-1: #033F63; /* indigo blue */
+	--color-2: #3C91E6;/* Tufts blue */
+	--color-3: #FFFBFC;/* snow */
+	--color-4: #F0C808;/* jonquil */
+	--color-5: #E03616;/* vermilion */
+	--color-6: #11151C; /* rich black fogra 29*/
+	--color-7: #212D40; /* prussian blue */ 
+	--color-8: #001F54; /* royal blue dark*/
+	--color-9: #0A1128; /* oxford Blue*/
+	--color-10: #000; /* black*/
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+	font-family: 'Sora', sans-serif;
+	color: var(--color-3);
+}
+html {
+    scroll-behavior: smooth
+}
+img {
+	max-width: 100%;
+    display: block;
+}
+::-moz-focus-inner {
+	border: 0;
+}
+body {
+	min-height: 100vh;
+    padding-top: 54px;
+	background: linear-gradient(30deg, var(--color-6), var(--color-7));
+	padding-bottom: 60px;
+	overflow-x: hidden;
+	position: relative;
+}
+.menu {
+    width: 100%;
+    background-color: var(--color-10);
+    position: fixed;
+    top: 0;
+    transition: .25s ease-in-out;
+    left: 0;
+    z-index: 2;
+}
+.menu ul {
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.menu li {
+    width: 100%;
+    padding: .5em;
+}
+.menu a {
+    width: 100%;
+    height: 60px;
+    min-width: 60px;
+    padding: .25em .5em;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.menu a div {
+    margin-right: .5em;
+}
+.menu a span {
+    margin-left: 80px;
+}
+.open-menu {
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+.hidden-menu {
+    top: -792px;
+}
+.img {
+    max-width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.portrait {
+    width: 60px;
+    height: 60px;
+    transition: .5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.portrait:hover {
+    width: 90px;
+    height: 90px;
+    top: -15px;
+}
+h3 {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    color: var(--color-3);
+    font-weight: 200;
+}
+.container {
+    width: 100%;
+    min-height: calc(100vh - 191px);
+    padding: 1em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container > * {
+    margin: 1em;
+}
+.container.right {
+    justify-content: flex-end;
+}
+.container.bottom {
+    align-items: flex-end;
+}
+.container.left {
+    justify-content: flex-start;
+}
+.container.top {
+    align-items: flex-start;
+}
+.description {
+    max-width: 420px;
+    /* margin-top: 6em; */
+    padding: 2em;
+    letter-spacing: 1px;
+    font-weight: 200;
+    background-color: rgba(0,0,0,0.3);
+}
+.description p {
+    color: var(--color-3);
+}
+section {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#home {
+    background-image: url('../img/deepfield.jpg');
+    background-color: var(--color-10);
+    background-blend-mode: hard-light;
+}
+#sun {
+    background-image: url('../img/sun-detail.jpg');
+}
+#mercury {
+    background-image: url('../img/mercury-detail.jpg');
+}
+#venus {
+    background-image: url('../img/venus-detail.jpg');
+}
+#earth {
+    background-image: url('../img/earth-detail.jpg');
+}
+#mars {
+    background-image: url('../img/mars-detail.jpg');
+}
+#jupiter {
+    background-image: url('../img/jupiter-detail.jpg');
+}
+#saturn {
+    background-image: url('../img/saturn-detail.jpg');
+}
+#uranus {
+    background-image: url('../img/uranus-detail.jpg');
+}
+#neptune {
+    background-image: url('../img/neptune-detail.jpg');
+}
+#pluto {
+    background-image: url('../img/pluto-detail.jpg');
+}
+footer {
+	width: 100%;
+	padding: 2em;
+	font-size: .7em;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+}
+/* utility classes */
+.hidden {
+    display: none!important;
+}
+@media screen and (min-width: 660px) {
+    h3 {
+        padding-top: 130px;
+    }
+    .hidden-menu {
+        top: 0;
+    }
+    .menu {
+        height: auto;
+    }
+    .menu ul {
+        flex-direction: row;
+        padding-bottom: 2em;
+    }
+    .menu li {
+        width: auto;
+        margin: 0 .5em;
+        padding: 0;
+    }
+    .menu a {
+        display: block;
+    }
+    .menu a .portrait {
+        margin: 0;
+        transition: .25s ease-in-out;
+    }
+    .menu .portrait:hover {
+        left: -15px;
+    }
+    .menu a span {
+        width: 100%;
+        margin: 0;
+        /* padding-top: 70px; */
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+    }
+    .menu li:hover a span {
+        display: block;
+    }
+    .open-menu {
+        display: none;
+    }    
+}
+    /* .orbits-on li {
+        width: 0;
+    }
+    .orbits-on a {
+        position: absolute;
+        top: calc(50vh - 60px);
+        left: 0;
+    }
+    .orbits-on a .portrait {
+        margin: auto;
+        position: relative;
+    }
+    .orbits-on .sun-anc {
+        top: 41vh;
+    }
+    .orbits-on .mercury-anc {
+        padding-top: 10em;
+        top: 35vh;
+        -webkit-animation: spin-right 5s linear infinite;
+        animation: spin-right 5s linear infinite;
+    }
+    .orbits-on .mercury-anc .portrait {
+        width: 30px;
+        height: 30px;
+    }
+    .orbits-on .venus-anc {
+        padding-top: 17.5em;
+        top: 29vh;
+        -webkit-animation: spin-right 12s linear infinite;
+        animation: spin-right 12s linear infinite;
+    }
+    .orbits-on .venus-anc .portrait, .earth-anc .portrait {
+        width: 40px;
+        height: 40px;
+    }
+    .orbits-on .earth-anc {
+        padding-top: 27em;
+        top: 21vh;
+        -webkit-animation: spin-right 20s linear infinite;
+        animation: spin-right 20s linear infinite;
+    }
+    .orbits-on .mars-anc {
+        padding-top: 35em;
+        top: 14vh;
+        -webkit-animation: spin-right 30s linear infinite;
+        animation: spin-right 30s linear infinite;
+    }
+    .orbits-on .mars-anc .portrait {
+        width: 35px;
+        height: 35px;
+    }
+    .orbits-on .jupiter-anc {
+        padding-top: 42em;
+        top: 8vh;
+        -webkit-animation: spin-right 80s linear infinite;
+        animation: spin-right 80s linear infinite;
+    }
+    .orbits-on .jupiter-anc .portrait {
+        transform: rotate(90deg);
+    }
+    .orbits-on .saturn-anc {
+        padding-top: 47em;
+        top: 5vh;
+        -webkit-animation: spin-right 160s linear infinite;
+        animation: spin-right 160s linear infinite;
+    }
+    .orbits-on .saturn-anc .portrait {
+        width: 105px;
+        height: 105px;
+        transform: rotate(90deg);
+    }
+    .orbits-on .uranus-anc {
+        padding-top: 61em;
+        top: -9vh;
+        -webkit-animation: spin-right 230s linear infinite;
+        animation: spin-right 230s linear infinite;
+    }
+    .orbits-on .uranus-anc .portrait, .neptune-anc .portrait  {
+        width: 42px;
+        height: 45px;
+    }
+    .orbits-on .neptune-anc {
+        padding-top: 68em;
+        top: -12vh;
+        -webkit-animation: spin-right 340s linear infinite;
+        animation: spin-right 340s linear infinite;
+    }
+    .orbits-on .pluto-anc {
+        padding-top: 76em;
+        top: -12vh;
+        -webkit-animation: spin-right 400s linear infinite;
+        animation: spin-right 400s linear infinite;
+    }
+    .orbits-on .pluto-anc .portrait {
+        width: 20px;
+        height: 20px;
+    }
+    /* ---------- Animation ---------- */
+    /* @-webkit-keyframes spin-right {
+        100% {
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      } */ 
